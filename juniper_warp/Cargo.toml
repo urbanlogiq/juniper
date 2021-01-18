@@ -13,15 +13,15 @@ subscriptions = ["juniper_graphql_ws"]
 
 [dependencies]
 anyhow = "1.0"
-bytes = "0.5"
-futures = "0.3.1"
+bytes = "1.0"
+futures = "0.3"
 juniper = { version = "0.15.2", path = "../juniper", default-features = false }
 juniper_graphql_ws = { version = "0.2.2", path = "../juniper_graphql_ws", optional = true }
-serde = { version = "1.0.75", features = ["derive"] }
-serde_json = "1.0.24"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
 thiserror = "1.0"
-tokio = { version = "0.2", features = ["blocking", "rt-core"] }
-warp = "0.2"
+tokio = { version = "^1.0", features = ["rt"] }
+warp = { git = "https://github.com/seanmonstar/warp.git", rev="ffefea0" }
 
 [dev-dependencies]
 env_logger = "0.8"
